@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'gs-rest-service'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile 'org.springframework.data:spring-data-mongodb:1.10.3.RELEASE'
+   compile "org.springframework.boot:spring-boot-starter-jersey"
+   compile "org.springframework.boot:spring-boot-starter-thymeleaf"
+   compile "org.springframework.boot:spring-boot-starter-web"
+   compile 'com.googlecode.json-simple:json-simple:1.1'
+   compile 'com.fasterxml.jackson.core:jackson-databind:2.9.0.pr3'
+   compile 'com.fasterxml.jackson.core:jackson-core:2.9.0.pr3'
+   compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.0.pr3'
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    
+}
