@@ -56,8 +56,7 @@ public class WebHandler {
 	
 	
 	@RequestMapping("/location")
-    public JSONObject fetchLocation(@RequestParam(value="db") String db, @RequestParam(value="type") String type,
-    		@RequestParam(value="country") String country) {
+    public JSONObject fetchLocation(@RequestParam(value="db") String db, @RequestParam(value="type") String type) {
 		JSONObject locationData = new JSONObject();
 		try {							
 			int dbName = Integer.parseInt(db);
@@ -94,7 +93,23 @@ public class WebHandler {
 		return locationData;
     }
 	
-	
+	@RequestMapping("/report_category")
+    public JSONObject reportByCategory(@RequestParam(value="db") String db, @RequestParam(value="type") String type,
+    		@RequestParam(value="country") String country) {
+		JSONObject reportData = new JSONObject();
+		try {		
+			
+			System.out.println(db+" "+type+" "+country);
+			JSONArray responseObj = mongoDbObject.getCategory(country);
+			System.out.println(responseObj.toJSONString());			
+			reportData.put("dataset_ID",1);
+			reportData.put("reportType",3);
+			reportData.put("data", responseObj);			
+		}catch(Exception E) {
+			
+		}
+		return reportData;
+    }
 	public static void main(String[] args){
 		WebHandler web = new WebHandler();
 	}
