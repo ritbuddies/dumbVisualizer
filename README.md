@@ -1,4 +1,4 @@
-# I-Know-Infections
+# dumbVisualizer
 
 ## Installations
 ### Database : MongoDB
