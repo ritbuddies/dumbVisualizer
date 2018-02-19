@@ -7,9 +7,6 @@ Most of the times users cannot interpret data from raw datasets and it is a tedi
 3. User can see previously created reports on existing datasets, they can choose to create new reports or even upload new datasets.
 Sharing of the charts/reports becomes easy in organizations since dumbVisualizer does data retrieval and chart preparation.
 
-## How we built it?
-We have a client-server model. We have hosted our RESTful API on the server and we are providing clients with RESTful client utility. Based on user selection it fetches required report details from the rest API and plots different charts or graphs using google charts API. We are using MongoDB to store the data and mongo-connectors for data extraction using java.
-
 ## Built With
 Java, Spring MVC, Gradle, MongoDB, Java-Swings, jersey-framework
 
@@ -18,6 +15,9 @@ Java, Spring MVC, Gradle, MongoDB, Java-Swings, jersey-framework
 Requirement : mongo-java-driver-3.6.3.jar, install mongo
 MongoDB : https://stackoverflow.com/questions/18452023/installing-and-running-mongodb-on-osx
 Jar File : http://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/  
+
+## How we built it?
+We have a client-server model. We have hosted our RESTful API on the server and we are providing clients with RESTful client utility. Based on user selection it fetches required report details from the rest API and plots different charts or graphs using google charts API. We are using MongoDB to store the data and mongo-connectors for data extraction using java.
 
 ## What's next for dumbVisualizer?
 Create machine learning models to produce better insights from data. Create interactive dashboards and add other other health datasets.
