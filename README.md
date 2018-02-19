@@ -10,15 +10,6 @@ Sharing of the charts/reports becomes easy in organizations since dumbVisualizer
 ## How we built it?
 We have a client-server model. We have hosted our RESTful API on the server and we are providing clients with RESTful client utility. Based on user selection it fetches required report details from the rest API and plots different charts or graphs using google charts API. We are using MongoDB to store the data and mongo-connectors for data extraction using java.
 
-## Challenges we ran into
-The challenges involve finding quality datasets, data cleaning and preparation, building restful API which can fulfill generic requests of data visualization for different datasets and how to visualize the data in the best possible way.
-
-Accomplishments that we're proud of
-We have successfully built a framework with restful API at the server and restful client utility helping different clients with different type of generic requests for given datasets.
-
-## What we learned?
-Dividing different modules within team members. Integrating these modules with minimum effort. How to make RESTful services and how to use existing services like google charts in the best possible way to solve our problem.
-
 ## Built With
 Java, Spring MVC, Gradle, MongoDB, Java-Swings, jersey-framework
 
@@ -31,4 +22,6 @@ Jar File : http://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started
 ## What's next for dumbVisualizer?
 Create machine learning models to produce better insights from data. Create interactive dashboards and add other other health datasets.
 
+## For more information about the project, please follow the below link:
+https://devpost.com/software/dumbvisualizer
 
